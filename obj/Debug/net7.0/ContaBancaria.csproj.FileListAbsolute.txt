@@ -1,0 +1,14 @@
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\bin\Debug\net7.0\ContaBancaria.exe
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\bin\Debug\net7.0\ContaBancaria.deps.json
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\bin\Debug\net7.0\ContaBancaria.runtimeconfig.json
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\bin\Debug\net7.0\ContaBancaria.dll
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\bin\Debug\net7.0\ContaBancaria.pdb
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ContaBancaria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ContaBancaria.AssemblyInfoInputs.cache
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ContaBancaria.AssemblyInfo.cs
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ContaBancaria.csproj.CoreCompileInputs.cache
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ContaBancaria.dll
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\refint\ContaBancaria.dll
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ContaBancaria.pdb
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ContaBancaria.genruntimeconfig.cache
+C:\Users\Assistencia Star\Desktop\ContaBancariaGen\ContaBancaria\obj\Debug\net7.0\ref\ContaBancaria.dll
