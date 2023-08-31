@@ -1,4 +1,6 @@
-﻿namespace ContaBancaria
+﻿using ContaBancaria.Model;
+
+namespace ContaBancaria
 {
     public class Program
     {
@@ -7,7 +9,18 @@
         static void Main(string[] args)
         {
 
+            
+            Conta c1 = new Conta(1,123,1,"USUARIO",100500.00M);
+            
+            c1.Visualizar();
+            c1.Sacar(12000.0M);
+            c1.Visualizar();
+            c1.Depositar(5000.0M);
+            c1.Visualizar();
+           
             int opcao;
+
+
 
             while (true)
             {
