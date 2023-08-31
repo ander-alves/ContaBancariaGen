@@ -13,11 +13,11 @@
             {
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("*****************************************************");
+                Console.WriteLine("=====================================================");
                 Console.WriteLine("                                                     ");
-                Console.WriteLine(LogoBanco());
+                LogoBanco();
                 Console.WriteLine("                                                     ");
-                Console.WriteLine("*****************************************************");
+                Console.WriteLine("=====================================================");
                 Console.WriteLine("                                                     ");
                 Console.WriteLine("            1 - Criar Conta                          ");
                 Console.WriteLine("            2 - Listar todas as Contas               ");
@@ -29,7 +29,8 @@
                 Console.WriteLine("            8 - Transferir valores entre Contas      ");
                 Console.WriteLine("            9 - Sair                                 ");
                 Console.WriteLine("                                                     ");
-                Console.WriteLine("*****************************************************");
+                Console.WriteLine("=====================================================");
+                Console.WriteLine("                                                     ");
                 Console.WriteLine("Entre com a opção desejada:                          ");
                 Console.WriteLine("                                                     ");
                 Console.ResetColor();
@@ -41,7 +42,7 @@
                 {
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\nBanco do NoBank's - Bem Melhor que o ROXO");
+                    Console.WriteLine("\nBanco do NoBank's - Bem Melhor que o ROXO ;D");
                     Sobre();
                     Console.ResetColor();
                     System.Environment.Exit(0);
@@ -122,6 +123,7 @@
         {
             Console.WriteLine("\n*********************************************************");
             Console.WriteLine("Projeto Desenvolvido por: Anderson Alves");
+            Console.WriteLine("Email: alves_anderson@outlook.com");
             Console.WriteLine("Generation Brasil - generation@generation.org");
             Console.WriteLine("github.com/ander-alves");
             Console.WriteLine("*********************************************************");
@@ -135,19 +137,20 @@
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("\nPressione Enter para Continuar...");
                 consoleKeyInfo = Console.ReadKey();
+
             } while (consoleKeyInfo.Key != ConsoleKey.Enter);
         }
 
 
-        static string LogoBanco()
+        static void LogoBanco()
         {
-            string LogoBanco = " _   _      ______             _    _     \r\n" +
-                 "| \\ | |     | ___ \\           | |  ( )    \r\n" +
-                 "|  \\| | ___ | |_/ / __ _ _ __ | | _|/ ___ \r\n" +
-                 "| . ` |/ _ \\| ___ \\/ _` | '_ \\| |/ / / __|\r\n" +
-                 "| |\\  | (_) | |_/ / (_| | | | |   <  \\__ \\\r\n" +
-                 "\\_| \\_/\\___/\\____/ \\__,_|_| |_|_|\\_\\ |___/";
-            return LogoBanco;
+            Console.WriteLine("      _   _      ______             _    _     \r\n" +
+                 "     | \\ | |     | ___ \\           | |  ( )    \r\n" +
+                 "     |  \\| | ___ | |_/ / __ _ _ __ | | _|/ ___ \r\n" +
+                 "     | . ` |/ _ \\| ___ \\/ _` | '_ \\| |/ / / __|\r\n" +
+                 "     | |\\  | (_) | |_/ / (_| | | | |   <  \\__ \\\r\n" +
+                 "     \\_| \\_/\\___/\\____/ \\__,_|_| |_|_|\\_\\ |___/");
+
         }
     }
 }
