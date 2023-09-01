@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace ContaBancaria.Model
 {
-    public class Conta
+    public abstract class Conta
     {
         private int numero;
         private int agencia;
         private int tipo;
-        private string titular = string.Empty;
+        private string titular;
         private decimal saldo;
 
-        /*Construtor criado com crtl + . */
         public Conta(int numero, int agencia, int tipo, string titular, decimal saldo)
         {
             this.numero = numero;
@@ -23,12 +22,12 @@ namespace ContaBancaria.Model
             this.titular = titular;
             this.saldo = saldo;
         }
-        /* Area Para Criar metodos, aqui primeiro os get e set */
 
-        public int GetNumemero()
+        public int GetNumero()
         {
             return numero;
         }
+
         public void SetNumero(int numero)
         {
             this.numero = numero;
@@ -38,6 +37,7 @@ namespace ContaBancaria.Model
         {
             return agencia;
         }
+
         public void SetAgencia(int agencia)
         {
             this.agencia = agencia;
@@ -47,6 +47,7 @@ namespace ContaBancaria.Model
         {
             return tipo;
         }
+
         public void SetTipo(int tipo)
         {
             this.tipo = tipo;
@@ -56,6 +57,7 @@ namespace ContaBancaria.Model
         {
             return titular;
         }
+
         public void SetTitular(string titular)
         {
             this.titular = titular;
@@ -65,18 +67,21 @@ namespace ContaBancaria.Model
         {
             return saldo;
         }
+
         public void SetSaldo(decimal saldo)
         {
             this.saldo = saldo;
         }
 
-        public bool Sacar(decimal valor)
+        public virtual bool Sacar(decimal valor)
         {
+
             if (this.GetSaldo() < valor)
             {
-                Console.WriteLine("Saldo Insuficiente");
+                Console.WriteLine("\n Saldo Insuficiente!");
                 return false;
             }
+
             this.SetSaldo(this.saldo - valor);
             return true;
         }
@@ -86,9 +91,8 @@ namespace ContaBancaria.Model
             this.SetSaldo(this.saldo + valor);
         }
 
-        public void Visualizar()
+        public virtual void Visualizar()
         {
-
 
             string tipo = "";
 
@@ -109,10 +113,7 @@ namespace ContaBancaria.Model
             Console.WriteLine("Agência: " + this.agencia);
             Console.WriteLine("Tipo da Conta: " + tipo);
             Console.WriteLine("Titular: " + this.titular);
-            Console.WriteLine("Saldo: " + (this.saldo).ToString("C"));
-
+            Console.WriteLine("Saldo: " + this.saldo);
         }
-
-
     }
 }
