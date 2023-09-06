@@ -11,27 +11,27 @@ namespace ContaBancaria
         {
             //instancia da classe contaController
             ContaController contas = new();
-              // Teste da Classe Conta Corrente
-              ContaCorrente cc1 = new(1, 123, 1, "Mariana", 15000.0M, 1000.0M);
-              contas.Cadastrar(cc1);
-              /*cc1.Visualizar();
-              cc1.Sacar(17000.0M);
-              cc1.Visualizar();
-              cc1.Depositar(5000.0M);
-              cc1.Visualizar();*/
+            // Teste da Classe Conta Corrente
+            ContaCorrente cc1 = new(1, 123, 1, "Mariana", 15000.0M, 1000.0M);
+            contas.Cadastrar(cc1);
+            /*cc1.Visualizar();
+            cc1.Sacar(17000.0M);
+            cc1.Visualizar();
+            cc1.Depositar(5000.0M);
+            cc1.Visualizar();*/
 
-              //Teste da Classe Conta Poupança
-              ContaPoupanca cp1 = new(2, 123, 2, "Victor", 100000.0M, 15);
-            contas.Cadastrar(cp1);  
+            //Teste da Classe Conta Poupança
+            ContaPoupanca cp1 = new(2, 123, 2, "Victor", 100000.0M, 15);
+            contas.Cadastrar(cp1);
             /*cp1.Visualizar();
               cp1.Sacar(1000.0M);
               cp1.Visualizar();
               cp1.Depositar(5000.0M);
               cp1.Visualizar();
             */
-            int opcao, agencia, tipo, aniversario,numero;
+            int opcao, agencia, tipo, aniversario, numero, numeroDestino;
             string? titular;
-            decimal saldo, limite;
+            decimal saldo, limite, valor;
 
             while (true)
             {
@@ -133,9 +133,9 @@ namespace ContaBancaria
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("Consultar dados da Conta - por número\n\n");
                         Console.ResetColor();
-                        
+
                         Console.WriteLine("Digite o Numero da Conta: ");
-                        
+
                         numero = Convert.ToInt32(Console.ReadLine());
                         contas.ProcurarPorNumero(numero);
 
@@ -208,6 +208,14 @@ namespace ContaBancaria
                         Console.WriteLine("Saque\n\n");
                         Console.ResetColor();
 
+                        Console.WriteLine("Digite o Numero da Conta: ");
+                        numero = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Digite o Valor do Saque (R$): ");
+                        valor = Convert.ToDecimal(Console.ReadLine());
+
+                        contas.Sacar(numero, valor);
+
                         KeyPress();
                         break;
                     case 7:
@@ -215,12 +223,32 @@ namespace ContaBancaria
                         Console.WriteLine("Depósito\n\n");
                         Console.ResetColor();
 
+                        Console.WriteLine("Digite o Numero da Conta: ");
+                        numero = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Digite o Valor do Deposito (R$): ");
+                        valor = Convert.ToDecimal(Console.ReadLine());
+
+                        contas.Depositar(numero, valor);
+
                         KeyPress();
                         break;
                     case 8:
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Transferência entre Contas\n\n");
                         Console.ResetColor();
+
+                        Console.WriteLine("Digite o Numero da Conta de Origem: ");
+                        numero = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Digite o Numero da Conta de Destino: ");
+                        numeroDestino = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Digite o Valor da Transferencia (R$): ");
+                        valor = Convert.ToDecimal(Console.ReadLine());
+
+                        contas.Transferir(numero, numeroDestino, valor);
+
 
                         KeyPress();
                         break;
