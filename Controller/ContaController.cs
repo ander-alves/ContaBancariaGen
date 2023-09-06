@@ -105,7 +105,7 @@ namespace ContaBancaria.Controller
             if (conta is not null)
             {
                 conta.Depositar(valor);
-                Console.WriteLine($"O Saque do Valor {valor} na {conta}, Foi Efetuado com Sucesso");
+                Console.WriteLine($"O Saque do Valor {valor} na {conta.GetNumero}, Foi Efetuado com Sucesso");
 
             }
             else
@@ -125,13 +125,13 @@ namespace ContaBancaria.Controller
                 if (contaOrigem.Sacar(valor) == true)
                 {
                     contaDestino.Depositar(valor);
-                    Console.WriteLine($"A Transferencia do Valor {valor} na {contaDestino.GetNumero()}, Foi Efetuado com Sucesso");
+                    Console.WriteLine($"A Transferencia do Valor R$: {valor} na Conta de Destino: {contaDestino.GetNumero()}, Foi Efetuado com Sucesso");
                 }
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"A Conta numero{contaDestino.GetNumero()}, nao foi encontrada! ");
+                Console.WriteLine($"A Conta de Destino numero: {contaDestino}, nao foi encontrada! ");
                 Console.ResetColor();
             }
 
